@@ -162,11 +162,11 @@ echo $HelpMessage
 
 CheckMount ;
 
-# Check to see if pwgen and useradd exist on this system.  This script requires them.
+# Check to see if pwgen, useradd, and openssl exist on this system.  This script requires them.
 declare -a CMDS=( "pwgen" "useradd" "openssl" )
 for i in $CMDS
 do
-        # command -v will return >0 when the $i is not found
+        # command -v will return >0 when the command (in the $i variable) is not found.
         command -v $i >/dev/null && continue || { echo "$i command not found, please install it or notify your system administrator."; exit 1 ; }
 done
 
