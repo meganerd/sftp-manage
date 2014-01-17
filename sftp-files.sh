@@ -28,7 +28,7 @@ LogFile="/var/log/sftp-files.log.csv"
 # Shell for the user
 UserShell="/usr/bin/scponly"
 
-# Group name or GID (if GID group must exist) that is chrooted in sshd_conf
+# Group name or GID (GID group must exist) that is configured for chrootin in the sshd_conf file.
 PrimaryGroup="sftponly"
 
 # Location where user's home directory lives.
